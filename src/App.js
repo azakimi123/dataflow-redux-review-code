@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import User from './Components/User';
+import ReduxExamples from './Components/ReduxExamples';
 import './App.css';
 
 class App extends Component {
@@ -10,12 +11,17 @@ class App extends Component {
     }
   }
 
+  nameChange = (newName) => {
+    this.setState({username: newName})
+  }
+
   
 
   render(){
     return (
       <div className="App">
-        <User />
+        {/* <User username={this.state.username} hometown='Bikini Bottom' nameFn={this.nameChange}/> */}
+        <ReduxExamples />
       </div>
     );
   }
